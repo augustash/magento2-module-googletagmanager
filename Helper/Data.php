@@ -16,7 +16,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function isEnabled($storeId = null)
     {
-        return (bool)$this->getConfig(self::XML_PATHENABLED, $storeId);
+        return (bool)$this->getConfig(self::XML_PATH_ENABLED, $storeId);
     }
 
     /**
@@ -28,7 +28,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function getTagId($storeId = null)
     {
         if ($this->isEnabled()) {
-            return $this->getConfig(self::XML_PATHTAG_ID, $storeId);
+            return $this->getConfig(self::XML_PATH_TAG_ID, $storeId);
         }
 
         return '';
