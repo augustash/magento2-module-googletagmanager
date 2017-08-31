@@ -1,0 +1,24 @@
+{
+    "name": "augustash/module-googletagmanager",
+    "description": "Adds Google Tag Manager configuration and snippet",
+    "type": "magento2-module",
+    "license": [
+        "proprietary"
+    ],
+    "authors":[
+        {
+            "name":"Josh Johnson",
+            "email":"josh@augustash.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Augustash\\GoogleTagManager\\": ""
+        }
+    }
+}
