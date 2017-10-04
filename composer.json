@@ -12,6 +12,7 @@
         }
     ],
     "require": {
+        "augustash/module-core": "~1.0.0"
     },
     "autoload": {
         "files": [
@@ -19,6 +20,12 @@
         ],
         "psr-4": {
             "Augustash\\GoogleTagManager\\": ""
+        }
+    },
+    "repositories": {
+        "augustash-core": {
+            "type": "vcs",
+            "url": "https://github.com/augustash/magento2-module-augustash-core.git"
         }
     }
 }
