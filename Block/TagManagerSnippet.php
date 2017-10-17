@@ -2,8 +2,6 @@
 
 namespace Augustash\GoogleTagManager\Block;
 
-use Magento\Framework\View\Element\Template\Context;
-use Magento\Store\Model\StoreManagerInterface;
 use Magento\Cookie\Helper\Cookie as HelperCookie;
 use Augustash\GoogleTagManager\Helper\Data as GtmHelperData;
 
@@ -28,23 +26,21 @@ class TagManagerSnippet extends \Magento\Framework\View\Element\Template
     /**
      * class constructor
      *
-     * @param Context                   $context
-     * @param GtmHelperData             $helper
-     * @param HelperCookie              $cookie
-     * @param StoreManagerInterface     $storeManager
-     * @param array                     $data
+     * @param \Magento\Framework\View\Element\Template\Context  $context
+     * @param GtmHelperData                                     $helper
+     * @param HelperCookie                                      $cookie
+     * @param array                                             $data
      */
     public function __construct(
-        Context $context,
+        \Magento\Framework\View\Element\Template\Context $context,
         GtmHelperData $helper,
         HelperCookie $cookie,
-        StoreManagerInterface $storeManager,
         array $data = []
     )
     {
         $this->gtmHelperData    = $helper;
         $this->helperCookie     = $cookie;
-        $this->storeManager     = $storeManager;
+        $this->storeManager     = $context->getStoreManager();
 
         parent::__construct($context, $data);
     }
