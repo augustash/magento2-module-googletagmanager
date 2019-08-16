@@ -5,6 +5,7 @@
     "license": [
         "proprietary"
     ],
+    "version": "2.0.0",
     "authors":[
         {
             "name":"Josh Johnson",
@@ -12,7 +13,7 @@
         }
     ],
     "require": {
-        "augustash/module-core": "~1.0.0"
+        "augustash/module-backend": "*"
     },
     "autoload": {
         "files": [
@@ -23,9 +24,9 @@
         }
     },
     "repositories": {
-        "augustash-core": {
+        "augustash-backend": {
             "type": "vcs",
-            "url": "https://github.com/augustash/magento2-module-augustash-core.git"
+            "url": "https://github.com/augustash/magento2-module-backend.git"
         }
     }
 }
